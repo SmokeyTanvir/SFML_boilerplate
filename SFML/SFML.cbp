@@ -22,15 +22,24 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="../External Libraries/SFML/Include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
+					<Add library="sfml-network" />
+					<Add library="sfml-audio" />
+					<Add library="sfml-main" />
+					<Add directory="../External Libraries/SFML/Lib" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
